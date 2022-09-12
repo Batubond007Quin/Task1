@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package protobuf;
+
+option go_package = "pkg/api/protobuf";
+
+message Message{
+    string body = 1;
+}
+
+service GatewayService{
+    rpc ChangeText(Message) returns (Message) {}
+}
